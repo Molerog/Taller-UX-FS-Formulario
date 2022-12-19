@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header id="header">
+        <span class="left-arrow-header">&#129044;</span>
+        <img class='logo-header' src="./images/mountain-logo.png" alt="mountain-logo">
+        <div class="container-hamburguer-header">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <main id="main">
+        <div id='modal-countries' class="modal hide">
+        </div>
+        <p class="form-header">Create your account</p>
+        <form class='form'>
+            <input type="text" class='placeholder' name="name" placeholder="Name" data-placeholder="Name"
+                title='Name may only contain letters' pattern=^\s*[a-zA-Z,\s]+\s*$ required>
+            <input type="text" name="surname" placeholder="Surname" title="Surname may only contain letters "
+                pattern=^\s*[a-zA-Z,\s]+\s*$ required>
+            <hr>
+            <p class="country-region-header">COUNTRY OR REGION</p>
+            <label for="country">Choose a country</label>
+            <div class="country-container">
+                <input id='select-country' type="text" name="country" placeholder="Spain">
+                <span>&#8964;</span>
+            </div>
+            <hr>
+            <input type="email" name="email" placeholder="Email" pattern=^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$
+                title='Email doesn´t have a correct format' required>
+            <div class="password-container">
+                <input class='password' type="password" name="password" placeholder="Contraseña" required>
+                <span class="locker">&#128272;</span>
+            </div>
+            <div id='validation-password' class="password-strength-container none">
+                <p>Your password may contain:</p>
+                <span>&#10003; 8 or more characters</span>
+                <span>&#10003; Upper case and lower case </span>
+                <span>&#10003; At least, one number</span>
+                <p>Security:</p>
+                <div class="bar-progress">
+                    <div class="content-bar-progress"></div>
+                </div>
+            </div>
+            <div class="passwordConfirm-container">
+                <input class='passwordConfirm' type="password" name="passwordConfirm" placeholder="Confirmar contraseña"
+                    required>
+                <span class="locker-2">&#128272;</span>
+            </div>
+            <hr>
+            <input type="text" name="prefix" value="+34 (España)" disabled>
+            <input type="number" name="phone" placeholder="Phone number">
+            <div class="confirm-container">
+                <input id=confirm type="checkbox" name="confirm" required>
+                <label for="confirm">I accept the privacy and advertising policy <a href="https://www.google.es/">+
+                        info</a></label>
+            </div>
+            <input id='submit' type="submit" value="Registrarse" class="submit" disabled>
+        </form>
+    </main>
+    <footer>
+    </footer>
+    <script src="/index.js" type="module"></script>
+</body>
+
+</html>
